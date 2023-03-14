@@ -50,6 +50,14 @@ var latlngs2 = [
 
 } // end function
 
+const [count, setCount] = useState(0);
+
+// Similar ao componentDidMount e componentDidUpdate:
+useEffect(() => {
+  // Atualiza o título do documento usando a API do browser
+  document.title = `Você clicou ${count} vezes`;
+});
+
 export default function App() {
 
   const c = useEffect(fun());
@@ -57,8 +65,17 @@ export default function App() {
   return (
     <div>
       <h1>Hello StackBlitz!</h1>
-      <p>{c}</p>
+      <div id="map">
+      <p>${fun()}</p>
+      </div>
+      
       <p>Start editing to see some magic happen :)</p>
+      <div>
+      <p>Você clicou {count} vezes</p>
+      <button onClick={() => setCount(count + 1)}>
+        Clique aqui
+      </button>
+    </div>
     </div>
   );
 }
