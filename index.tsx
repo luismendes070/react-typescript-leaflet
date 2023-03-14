@@ -1,3 +1,4 @@
+import { ErrorBoundary } from './ErrorBoundary';
 import * as React from 'react';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -10,7 +11,9 @@ try{
   
   root.render(
     <StrictMode>
-      <App />
+      <ErrorBoundary>
+      ${App()}
+      </ErrorBoundary>
     </StrictMode>
   );
 }catch(error){

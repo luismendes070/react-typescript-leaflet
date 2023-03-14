@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "useStrict": true,
     "esModuleInterop":true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
