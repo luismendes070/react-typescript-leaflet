@@ -4,11 +4,17 @@ import { createRoot } from 'react-dom/client';
 
 import App from './App';
 
-const rootElement = document.getElementById('root');
-const root = createRoot(rootElement);
-
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+try{
+  const rootElement = document.getElementById('root');
+  const root = createRoot(rootElement);
+  
+  root.render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+}catch(error){
+console.log('\n React + leaflet exception.');
+}finally{
+console.log('\n React App function finally.');
+}
