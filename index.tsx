@@ -1,5 +1,5 @@
 import { MyComponent } from './MyComponent';
-import { ErrorBoundary } from './ErrorBoundary';
+// import { ErrorBoundary } from './ErrorBoundary';
 import * as React from 'react';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -18,10 +18,10 @@ try{
   root.render(
     <StrictMode>
       <MyComponent>
-      <ErrorBoundary>
+      
       ${App()}
       </ErrorBoundary>
-      </MyComponent>
+      
     </StrictMode>
   );
 }catch(error){
