@@ -24,6 +24,7 @@ try{
       
     </StrictMode>
   );
+  
 }catch(error){
 console.log('\n React + leaflet exception.');
 }finally{
