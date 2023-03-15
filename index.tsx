@@ -6,6 +6,11 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 
 try{
+  
+  require("@babel/core").transform("code", {
+    presets: ["@babel/preset-env"],
+  });
+
   const rootElement = document.getElementById('root');
   const root = createRoot(rootElement);
   
@@ -19,5 +24,5 @@ try{
 }catch(error){
 console.log('\n React + leaflet exception.');
 }finally{
-console.log('\n React App function finally.');
+console.log('\n React TypeScript App function finally.');
 }
