@@ -38,6 +38,7 @@ map.on('click', onMapClick);
 
 // zoom the map to the polygon
 map.fitBounds(polygon.getBounds());
+map.fitBounds(polygon2.getBounds());
 
 var latlngs2 = [
   [ // first polygon
