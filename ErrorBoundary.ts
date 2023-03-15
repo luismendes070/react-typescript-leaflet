@@ -21,13 +21,25 @@ export default class ErrorBoundary extends React.Component<{}, ErrorBoundaryStat
   }
 
   render() {
-    if (this.state.hasError) {
-      // Você pode renderizar qualquer UI alternativa
-      return <h1>Algo deu errado.</h1>;
+
+    try{
+
+      if (this.state.hasError) {
+        // Você pode renderizar qualquer UI alternativa
+        return <h1>Algo deu errado.</h1>;
+      }
+  
+      return this.props.children; 
+
+    }catch(e){
+
+      console.log('Error Boundary render function exception.');
+
+    }finally{
+      console.log('Error Boundary render function end finally.');
     }
 
-    return this.props.children; 
-  }
+   } // end render function
 }
 
 function logErrorToMyService(error: any, errorInfo: any) {

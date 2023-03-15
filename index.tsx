@@ -1,3 +1,4 @@
+import { MyComponent } from './MyComponent';
 import { ErrorBoundary } from './ErrorBoundary';
 import * as React from 'react';
 import { StrictMode } from 'react';
@@ -16,9 +17,11 @@ try{
   
   root.render(
     <StrictMode>
+      <MyComponent>
       <ErrorBoundary>
       ${App()}
       </ErrorBoundary>
+      </MyComponent>
     </StrictMode>
   );
 }catch(error){
