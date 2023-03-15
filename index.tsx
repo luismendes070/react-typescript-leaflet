@@ -20,11 +20,12 @@ try{
       <MyComponent>
       
       ${App()}
-      </ErrorBoundary>
+      
+      </MyComponent>
       
     </StrictMode>
   );
-  
+
 }catch(error){
 console.log('\n React + leaflet exception.');
 }finally{
